@@ -14,3 +14,5 @@ foreach ($import in @($Public))
 
 Set-Alias -Name Connect-MsolService -Value Connect-MsolServiceLW -Scope Global
 Set-Alias -Name Get-MsolUser -Value Get-MsolUserLW -Scope Global
+Set-Alias -Name Get-MsolPartnerContract -Value Get-MsolPartnerContractLW -Scope Global
+Set-Alias -Name Get-MsolDomain -Value Get-MsolDomainLW -Scope Global

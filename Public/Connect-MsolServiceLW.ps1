@@ -3,8 +3,6 @@ function global:Connect-MsolServiceLW {
         [String]$AdGraphAccessToken,
         [String]$MsGraphAccessToken
     )
-
-    #$script:MSOnlineLWTrackingHeader = '6047694e-8298-4fe3-8b2c-da19e97a9c30'
     $script:MSOnlineLWTrackingHeader = New-Guid
     $script:MSOnlineLWAdGraphAccessToken = $AdGraphAccessToken
     $script:MSOnlineLWMsGraphAccessToken = $MsGraphAccessToken
@@ -19,5 +17,4 @@ function global:Connect-MsolServiceLW {
     } catch {
         Write-Error "Failed to Connect to MS Online: $_"
     }
-
 }
