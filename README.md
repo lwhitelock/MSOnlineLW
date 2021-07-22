@@ -14,6 +14,14 @@ No other changes should be needed.
 
 
 # Usage
+This module should be used inconjunction with my PartnerCenterLW module https://github.com/lwhitelock/PartnerCenterLW
+
+Connect-MsolService will only work with the secure application module:
+```
+$aadGraphToken = New-PartnerAccessToken -ApplicationId $ApplicationId -Credential $credential -RefreshToken $refreshToken -Scopes 'https://graph.windows.net/.default' -ServicePrincipal -Tenant $tenantID
+$graphToken = New-PartnerAccessToken -ApplicationId $ApplicationId -Credential $credential -RefreshToken $refreshToken -Scopes 'https://graph.microsoft.com/.default' -ServicePrincipal -Tenant $tenantID
+$MSOLConnection = Connect-MsolService -AdGraphAccessToken $aadGraphToken.AccessToken -MsGraphAccessToken $graphToken.AccessToken
+```
   
 The currently implemented commands are:
 ```
