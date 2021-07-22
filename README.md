@@ -8,7 +8,7 @@ This module implements the most commonly used methods from the MSOnline module. 
 This module has been published to the PowerShell Gallery. In your script edit:  
 
     "install-module MSOnline" to be "install-module MSOnlineLW"
-    "import-module MSOnlineLW" to be "import-module MSOnlineLW"
+    "import-module MSOnline" to be "import-module MSOnlineLW"
 
 No other changes should be needed.
 
